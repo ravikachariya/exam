@@ -1,0 +1,80 @@
+<!-- addfeedback.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Pass a JavaScript variable to a partial in EJS -->
+  <%- include('partials/head.ejs', { title }) %>
+
+  <body>
+    <%- include('partials/navbar2') %>
+
+    <div class="content">
+      <div class="create">
+        <img src="/img/online-registration.png" height="35px" width="35px">
+        <h2>New Registration</h2>
+        <form action="/user/signup" method="POST">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value=""
+            required
+          />
+          <br />
+
+          <label for="password">Password:</label>
+          <input
+            value=""
+            type="password"
+            id="password"
+            name="password"
+            required
+          />
+          <br />
+
+          <label for="firstname">First Name:</label>
+          <input
+            value=""
+            type="firstname"
+            id="firstname"
+            name="firstname"
+            required
+          />
+          <br />
+
+          <label for="lastname">Last Name:</label>
+          <input
+            value=""
+            type="lastname"
+            id="lastname"
+            name="lastname"
+            required
+          />
+          <br />
+
+          <label for="phonenumber">Phone Number:</label>
+          <input
+            value=""
+            type="phonenumber"
+            id="phonenumber"
+            name="phonenumber"
+            required
+          />
+          <br />
+
+          <label>Role:
+            <select name="role" id="role">
+              <option value="admin">Admin</option>
+              <option value="user">User</option>
+            </select>
+          </label> 
+          <br />
+
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>
